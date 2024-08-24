@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Website</title>
+</head>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgba(128, 128, 128, 0.611);
+}
+
+    /* *{
+        border: 2px solid green;
+        
+    } */
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+    }
+
+    .div1 {
+        height: 25px;
+        margin-top: 6px;
+        font-size: 25px;
+        color: rgb(181, 1, 1);
+        margin-right: 40px;
+
+    }
+
+    #imgp {
+        width: 40px;
+        margin-left: 50px;
+        border-radius: 0px 35px 0px 35px;
+        box-shadow: 1px 1px 10px rgb(181, 1, 1) ;
+
+    }
+
+    #btn1 {
+        height: 40px;
+        width: 100px;
+        border-radius: 25px;
+        border: none;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        font-size: 17px;
+    }
+
+    #btn1:hover {
+        outline: 3px solid  rgb(142, 2, 2);
+    }
+
+    #btn2 {
+        height: 40px;
+        width: 80px;
+        border-radius: 25px;
+        border: none;
+        color: black;
+        font-size: 17px;
+    }
+
+    #btn2:hover {
+        color: black;
+        background-color: gainsboro;
+        cursor: pointer;
+        outline: 3px solid rgb(142, 2, 2);
+    }
+
+    #btn3 {
+        height: 40px;
+        width: 100px;
+        border-radius: 25px;
+        border: none;
+        color: white;
+        background-color: rgb(181, 1, 1);
+        font-size: 17px;
+        margin-right: 40px;
+    }
+
+    #btn3:hover {
+        color: white;
+        background-color: rgb(142, 2, 2);
+        cursor: pointer;
+        outline: 3px solid black;
+    }
+
+    .div2>input {
+        height: 35px;
+        border: none;
+        outline: none;
+        border-bottom: 3px solid rgb(181, 1, 1);
+        background-color: transparent;
+
+
+    }
+
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .main2 {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    img:hover {
+        border-radius: 35px 35px 35px 35px;
+        box-shadow: 1px 1px 10px rgb(181, 1, 1) ;
+    }
+
+
+    .main3 {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+
+    }
+
+    .main4 {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+
+    }
+
+    .main5 {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+
+    }
+
+    .main6 {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+
+    }
+
+    .img1 {
+        height: 400px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .bt1{
+        position: absolute;
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 401px;
+        border-radius: 35px 0px 35px 0px;
+        background-color: rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt1:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt2{
+        position: absolute;
+        top: 712px;
+        left:176px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 250px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt2:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt3{
+        position: absolute;
+        top: 1023px;
+        left:176px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 353px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt3:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt4{
+        position: absolute;
+        top: 1358px;
+        left:176px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 303px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt4:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt5{
+        position: absolute;
+        top: 303px;
+        left:  467px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 251px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt5:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+    .bt6{
+        position: absolute;
+        top: 613px;
+        left:468px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 353px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt6:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt7{
+        position: absolute;
+        top: 1048px;
+        left:468px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 504px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt7:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt8{
+        position: absolute;
+        top: 1407px;
+        left:468px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 200px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt8:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt9{
+        position: absolute;
+        top: 377px;
+        left:  760px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 401px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt9:active{
+        top: 377px;
+        left: 176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+    .bt10{
+        position: absolute;
+        top: 712px;
+        left:760px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 250px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt10:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt11{
+        position: absolute;
+        top: 1023px;
+        left:760px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 353px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt11:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt12{
+        position: absolute;
+        top: 1358px;
+        left:760px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 303px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt12:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+    .bt13{
+        position: absolute;
+        top: 303px;
+        left:  1053px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 251px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt13:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+    .bt14{
+        position: absolute;
+        top: 613px;
+        left:1053px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 353px;
+        border-radius: 35px 0px 35px 0px;
+        background-color: rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt14:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt15{
+        position: absolute;
+        top: 1048px;
+        left:1053px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 504px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt15:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt16{
+        position: absolute;
+        top: 1407px;
+        left:1053px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 200px;
+        border-radius: 35px 0px 35px 0px;
+        background-color: rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt16:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+    .bt17{
+        position: absolute;
+        top: 377px;
+        left:  1343px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 401px;
+        border-radius: 35px 0px 35px 0px;
+        background-color: rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt17:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt18{
+        position: absolute;
+        top: 712px;
+        left:1343px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 250px;
+        border-radius: 35px 0px 35px 0px;
+        background-color: rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt18:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt19{
+        position: absolute;
+        top: 1023px;
+        left:1343px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 353px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt19:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+    .bt20{
+        position: absolute;
+        top: 1358px;
+        left:1343px;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        height: 303px;
+        border-radius: 35px 0px 35px 0px;
+        background-color:  rgba(0, 0, 0, 0.593);
+        border: dashed ;
+        color: rgb(181, 1, 1);
+        outline: 3px;
+        width: 272px;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black ;
+        
+    }
+
+
+    .bt20:active{
+        top: 377px;
+        left:  176px;
+        font-size: 30px;
+        visibility: hidden;
+        
+        
+    }
+
+
+    
+
+    .img2 {
+        height: 250px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img3 {
+        height: 350px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img4 {
+        height: 300px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img5 {
+        height: 250px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img6 {
+        height: 350px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img7 {
+        height: 500px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+    }
+
+    .img8 {
+        height: 200px;
+        width: 272px;
+        border-radius: 35px 0px 35px 0px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+
+
+
+    .gmain {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <img id="imgp" src="img/pinterest png.png" alt="">
+        <div class="div1">Pintrest</div>
+        <button id="btn1">Epxlore</button>
+        <div class="div2"><input type="text" size="130px" placeholder="Search"></div>
+        <button id="btn2">Login in</button>
+        <button id="btn3">Sign up</button>
+    </div>
+
+    <h1>Explore populer ideas</h1>
+    <div class="gmain">
+        <div class="main2">
+            <img class="img1" src="img/photo-1724036150083-477ae532c587.avif" alt="">
+            <button class="bt1">Open</button>
+            <img class="img2" src="img/photo-1724098035045-bed5b03fa7d0.avif" alt="">
+            <button class="bt2">Open</button>
+            <img class="img3" src="img/photo-1724094505377-ac01c7813010.avif" alt="">
+            <button class="bt3">Open</button>
+            <img class="img4" src="img/premium_photo-1686090450479-370d5ddf4de1.avif" alt="">
+            <button class="bt4">Open</button>
+        </div>
+        <div class="main3">
+            <img class="img5" src="img/premium_photo-1686090450479-370d5ddf4de1.avif" alt="">
+            <button class="bt5">Open</button>
+            <img class="img6" src="img/photo-1724094505377-ac01c7813010.avif" alt="">
+            <button class="bt6">Open</button>
+            <img class="img7" src="img/photo-1724098035045-bed5b03fa7d0.avif" alt="">
+            <button class="bt7">Open</button>
+            <img class="img8" src="img/photo-1724036150083-477ae532c587.avif" alt="">
+            <button class="bt8">Open</button>
+        </div>
+        <div class="main4">
+            <img class="img1" src="img/photo-1724036150083-477ae532c587.avif" alt="">
+            <button class="bt9">Open</button>
+            <img class="img2" src="img/photo-1724098035045-bed5b03fa7d0.avif" alt="">
+            <button class="bt10">Open</button>
+            <img class="img3" src="img/photo-1724094505377-ac01c7813010.avif" alt="">
+            <button class="bt11">Open</button>
+            <img class="img4" src="img/premium_photo-1686090450479-370d5ddf4de1.avif" alt="">
+            <button class="bt12">Open</button>
+        </div>
+        <div class="main5">
+            <img class="img5" src="img/premium_photo-1686090450479-370d5ddf4de1.avif" alt="">
+            <button class="bt13">Open</button>
+            <img class="img6" src="img/photo-1724094505377-ac01c7813010.avif" alt="">
+            <button class="bt14">Open</button>
+            <img class="img7" src="img/photo-1724098035045-bed5b03fa7d0.avif" alt="">
+            <button class="bt15">Open</button>
+            <img class="img8" src="img/photo-1724036150083-477ae532c587.avif" alt="">
+            <button class="bt16">Open</button>
+        </div>
+        <div class="main6">
+            <img class="img1" src="img/photo-1724036150083-477ae532c587.avif" alt="">
+            <button class="bt17">Open</button>
+            <img class="img2" src="img/photo-1724098035045-bed5b03fa7d0.avif" alt="">
+            <button class="bt18">Open</button>
+            <img class="img3" src="img/photo-1724094505377-ac01c7813010.avif" alt="">
+            <button class="bt19">Open</button>
+            <img class="img4" src="img/premium_photo-1686090450479-370d5ddf4de1.avif" alt="">
+            <button class="bt20">Open</button>
+        </div>
+    </div>
+</body>
+
+</html>
